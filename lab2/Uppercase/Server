@@ -1,0 +1,51 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package UpperCase;
+
+/**
+ *
+ * @author Latif
+ */
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+public class Server {
+    ServerSocket ssocket;
+
+    public void Start(int port) {
+        try {
+            this.ssocket = new ServerSocket(port);
+            while (!this.ssocket.isClosed()) {
+                Socket csocket = this.ssocket.accept(); // blocking
+                OutputStream cout = csocket.getOutputStream();
+                InputStream cinput = csocket.getInputStream();
+
+                // Read message
+                int bsize = cinput.read();
+                byte buffer[] = new byte[bsize];
+                cinput.read(buffer);
+
+                // Operation
+                String rqMsg = new String(buffer);
+                String rsMsg = " " + rqMsg.toUpperCase();
+
+                // Send message
+                cout.write(rsMsg.getBytes());
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(Server.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    public static void main(String[] args) {
+        Server s1 = new Server();
+        s1.Start(7000);
+    }
+}

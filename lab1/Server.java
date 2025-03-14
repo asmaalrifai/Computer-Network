@@ -10,7 +10,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author asma
+ * @author Asma
  */
 public class Server {
     ServerSocket ssocket;

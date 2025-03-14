@@ -6,7 +6,7 @@ package UpperCase;
 
 /**
  *
- * @author Latif
+ * @author Asma
  */
 import java.io.InputStream;
 import java.io.OutputStream;

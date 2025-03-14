@@ -9,7 +9,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author Latif
+ * @author Asma
  */
 public class UpperCase extends javax.swing.JFrame {
 

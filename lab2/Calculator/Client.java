@@ -6,7 +6,7 @@ package Calculator;
 
 /**
  *
- * @author Latif
+ * @author Asmz
  */
 import java.io.InputStream;
 import java.io.OutputStream;

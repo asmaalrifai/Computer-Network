@@ -8,7 +8,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author asma
+ * @author Asma
  */
 public class Client {
     Socket cSocket;

@@ -10,7 +10,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author Latif
+ * @author Asma
  */
 public class Calculator extends javax.swing.JFrame {
 
